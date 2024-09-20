@@ -1,7 +1,6 @@
 import Bottom_bar from "@/components/Bottom_bar";
 import My_button from "@/components/My_button";
 import { what_we_do_list_type } from "@/types/welcome";
-import { Button } from "antd";
 import Image from "next/image";
 
 export default function Home() {
