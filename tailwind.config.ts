@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ['DM Sans', 'sans-serif'], // Add DM Sans to the sans-serif stack
+      },
     },
   },
   plugins: [],
