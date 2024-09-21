@@ -7,9 +7,8 @@ import { useRouter } from 'next/navigation'
 import Bottom_bar from '@/components/Bottom_bar'
 import useOnboardingStore from '@/store/onboarding'
 
-const page = () => {
+const Page = () => {
 
-  const tabs = useOnboardingStore((state) => state.onboard_tab);
   const set_tabs = useOnboardingStore((state) => state.set_onboarding_tab);
 
   useEffect(()=>{
@@ -18,7 +17,7 @@ const page = () => {
       tab2:true,
       tab3:true,
     })
-  },[])
+  })
 
 
   const router = useRouter();
@@ -26,9 +25,9 @@ const page = () => {
 
   const handleClick = (): void => {
     setClicked((prev) => !prev);
-    setTimeout(() => {
+    
       router.push("/");
-    }, 1000);
+
   }
 
 
@@ -157,4 +156,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

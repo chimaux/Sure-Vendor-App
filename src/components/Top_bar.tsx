@@ -5,9 +5,7 @@ const Top_bar = () => {
   const tabs = useOnboardingStore((state) => state.onboard_tab);
   const { tab1, tab2, tab3 } = tabs;
 
-  useEffect(() => {
-    console.log(tabs)
-  }, []);
+
 
   const top_tab = [
     {

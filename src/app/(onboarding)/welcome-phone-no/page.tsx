@@ -7,9 +7,9 @@ import FormItem from "antd/es/form/FormItem";
 import { useRouter } from "next/navigation";
 import  useOnboardingStore  from "@/store/onboarding";
 
-const page = () => {
+const Page = () => {
 
-  const tabs = useOnboardingStore((state) => state.onboard_tab);
+  
   const set_tabs = useOnboardingStore((state) => state.set_onboarding_tab);
 
   useEffect(()=>{
@@ -18,16 +18,16 @@ const page = () => {
       tab2:false,
       tab3:false,
     })
-  },[])
+  })
 
   const router = useRouter();
   const [clicked, setClicked] = useState<boolean>(false);
 
   const handleClick = (): void => {
     setClicked((prev) => !prev);
-    setTimeout(() => {
+ 
       router.push("/enter-basic-info");
-    }, 1000);
+ 
   };
 
   return (
@@ -88,4 +88,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
