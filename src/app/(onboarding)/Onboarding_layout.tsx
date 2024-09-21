@@ -1,8 +1,6 @@
 import Get_started_back from "@/components/Get_started_back";
 import Top_bar from "@/components/Top_bar";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import React, { ReactNode } from "react";
+import React from "react";
 
 interface LayoutProps {
 

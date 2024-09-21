@@ -5,7 +5,7 @@ import { Button, Form, Input, Spin } from 'antd'
 import FormItem from 'antd/es/form/FormItem'
 import { useRouter } from 'next/navigation'
 import Bottom_bar from '@/components/Bottom_bar'
-import { useOnboardingStore } from '@/store/onboarding'
+import useOnboardingStore from '@/store/onboarding'
 
 const page = () => {
 

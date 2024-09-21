@@ -1,12 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Onboarding_layout from "../Onboarding_layout";
-import My_button from "@/components/My_button";
 import Bottom_bar from "@/components/Bottom_bar";
 import { Button, Form, Input, Spin } from "antd";
 import FormItem from "antd/es/form/FormItem";
 import { useRouter } from "next/navigation";
-import { useOnboardingStore } from "@/store/onboarding";
+import  useOnboardingStore  from "@/store/onboarding";
 
 const page = () => {
 

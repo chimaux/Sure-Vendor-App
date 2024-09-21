@@ -5,7 +5,7 @@ import { create } from 'zustand'
 
 
 
-export const useOnboardingStore = create<onboard_tab_type_v2>((set) => ({
+const useOnboardingStore = create<onboard_tab_type_v2>((set) => ({
     onboard_tab: {
         tab1:true,
         tab2:false,
@@ -13,7 +13,9 @@ export const useOnboardingStore = create<onboard_tab_type_v2>((set) => ({
     
       },
       set_onboarding_tab: (state:onboard_tab_type) => set({ onboard_tab: state }),
-      
+
     
     
 }))
+
+export default useOnboardingStore

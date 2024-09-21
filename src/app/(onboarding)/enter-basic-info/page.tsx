@@ -5,11 +5,12 @@ import { Button, Form, Input, Spin } from 'antd'
 import FormItem from 'antd/es/form/FormItem'
 import { useRouter } from 'next/navigation'
 import Bottom_bar from '@/components/Bottom_bar'
-import { useOnboardingStore } from '@/store/onboarding'
+import useOnboardingStore from '@/store/onboarding'
+
 
 const page = () => {
 
-  const tabs = useOnboardingStore((state) => state.onboard_tab);
+
   const set_tabs = useOnboardingStore((state) => state.set_onboarding_tab);
 
   useEffect(()=>{

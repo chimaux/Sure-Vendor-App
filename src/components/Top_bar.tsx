@@ -1,12 +1,9 @@
-import { useOnboardingStore } from "@/store/onboarding";
-import React, { useEffect, useState } from "react";
+import useOnboardingStore from "@/store/onboarding";
+import React, { useEffect} from "react";
 
 const Top_bar = () => {
   const tabs = useOnboardingStore((state) => state.onboard_tab);
   const { tab1, tab2, tab3 } = tabs;
-
-//   const set_tabs = useOnboardingStore((state) => state.set_onboarding_tab);
-
 
   useEffect(() => {
     console.log(tabs)
