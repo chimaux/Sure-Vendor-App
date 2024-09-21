@@ -1,7 +1,10 @@
+
 import Bottom_bar from "@/components/Bottom_bar";
 import My_button from "@/components/My_button";
 import { what_we_do_list_type } from "@/types/welcome";
 import Image from "next/image";
+
+
 
 export default function Home() {
 
@@ -75,6 +78,8 @@ const what_we_do_list:what_we_do_list_type[] = [
       <div className="w-full flex flex-col gap-y-[44px] items-center lg:gap-y-[500px] xl:gap-y-[44px]">
 <My_button
 text="Get Started"
+page_route="/welcome-phone-no"
+
 />
 
 <Bottom_bar/>
