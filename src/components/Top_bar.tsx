@@ -1,4 +1,3 @@
-"use client";
 import { useOnboardingStore } from "@/store/onboarding";
 import React, { useEffect, useState } from "react";
 

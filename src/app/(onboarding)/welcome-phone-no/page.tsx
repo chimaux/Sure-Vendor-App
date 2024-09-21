@@ -47,18 +47,18 @@ const page = () => {
           rules={[
             {
               required: true,
-              message: "Please input your phone number!",
+              message: "Please input your phone number or email!",
             },
             {
-              pattern: /^(08|09|07)\d{9}$/,
-              message: "Please enter a valid phone number!",
+              pattern: /^(08|09|07)\d{9}$|^[A-Za-z\s]+@[A-Za-z]+\.[A-Za-z]{2,}$/,
+              message: "Please enter a valid phone number or email!",
             },
           ]}
         >
           <Input
             type="text"
        
-            placeholder="Enter your name"
+            placeholder="Enter your email or phone number"
             className="w-full h-[52px] px-[16px] py-[17px] rounded-[12px] font-[400] border mt-[24px] lg:w-[50vw]"
           />
         </FormItem>
