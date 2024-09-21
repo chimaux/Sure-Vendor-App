@@ -1,5 +1,5 @@
 import useOnboardingStore from "@/store/onboarding";
-import React, { useEffect} from "react";
+import React from "react";
 
 const Top_bar = () => {
   const tabs = useOnboardingStore((state) => state.onboard_tab);
