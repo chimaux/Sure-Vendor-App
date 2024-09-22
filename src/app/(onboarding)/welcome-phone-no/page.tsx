@@ -49,8 +49,13 @@ const Page = () => {
               message: "Please input your phone number or email!",
             },
             {
-              pattern: /^(08|09|07)\d{9}$|^[A-Za-z\s]+@[A-Za-z]+\.[A-Za-z]{2,}$/,
+              pattern: /^(080|090|070|081|091)\d{8}$|^[A-Za-z\s]+@[A-Za-z]+\.[A-Za-z]{2,}$/,
               message: "Please enter a valid phone number or email!",
+            },
+         
+            {
+              max: 11,
+              message: "Phone number input currently accepts only 11 digits",
             },
           ]}
         >

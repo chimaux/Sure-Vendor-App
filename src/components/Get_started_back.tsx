@@ -3,7 +3,11 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React from 'react'
 
-const Get_started_back = () => {
+
+interface text_type{
+  text?:string
+}
+const Get_started_back = ({text='Get Started'}:text_type) => {
 
     const router = useRouter();
   return (
@@ -16,7 +20,10 @@ const Get_started_back = () => {
         width={11.67}
         height={11.67}
       />
-      <div className="font-500 text-[16px]">Get Started</div>
+      <div className="font-500 text-[16px]">
+        {text}
+
+        </div>
     </div>
   )
 }
