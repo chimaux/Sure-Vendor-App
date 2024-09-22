@@ -1,7 +1,7 @@
 import { what_we_do_list_type } from "@/types/welcome";
 import { NextResponse } from "next/server";
 
-const what_we_do_list:what_we_do_list_type[] = [
+const record:what_we_do_list_type[] = [
   {
     icon: "/check_circle.svg",
     text: "Reach millions of Shoppers"
@@ -23,7 +23,7 @@ const what_we_do_list:what_we_do_list_type[] = [
 
 export async function GET(){
   return NextResponse.json({
-    the_data:what_we_do_list
+    the_data:record
   })
 }
 
