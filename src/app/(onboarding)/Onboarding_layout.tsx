@@ -21,12 +21,14 @@ const Onboarding_layout = ({ top_text, sub_text }: LayoutProps) => {
 
 <Top_bar/>
 
-<h1 className="font-500 text-[24px] text-[#000]">
+<h1 className="font-500 text-[24px] text-[#000] lg:text-center">
  {top_text}
 </h1>
 
-<div className="w-[70%]">
-<p style={{
+<div className="w-[70%] lg:w-full">
+<p 
+className="lg:text-center"
+style={{
   color:"rgb(0 0 0 / 60%)"
 }}>
 {sub_text}

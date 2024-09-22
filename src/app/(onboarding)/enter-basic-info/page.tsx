@@ -6,6 +6,7 @@ import FormItem from 'antd/es/form/FormItem'
 import { useRouter } from 'next/navigation'
 import Bottom_bar from '@/components/Bottom_bar'
 import useOnboardingStore from '@/store/onboarding'
+import Image from 'next/image'
 
 
 const Page = () => {
@@ -40,11 +41,45 @@ const Page = () => {
       top_text="Complete profile setup"
       sub_text="Connect your socials for quick setup"
 />
+
+<div className='w-full flex justify-between items-center py-[10px] lg:justify-center lg:gap-x-[30px]'>
+<Image
+src="/social1.svg"
+alt='social icon'
+height={48}
+width={101.33}
+className='cursor-pointer'
+/>
+<Image
+src="/social2.svg"
+alt='social icon'
+height={48}
+width={101.33}
+className='cursor-pointer'
+/>
+<Image
+src="/social3.svg"
+alt='social icon'
+height={48}
+width={101.33}
+className='cursor-pointer'
+/>
+</div>
+
+
+<p 
+className='lg:text-center'
+style={{
+  color:"rgb(0 0 0 / 60%)"
+}}>
+Or enter it manually
+</p>
       {/* <Form> */}
       <Form className="w-full flex flex-col items-center justify-between bg-[#fff] flex-grow "
       onFinish={handleClick}
       >
-        <FormItem
+<div className='w-full lg:w-fit'>
+<FormItem
          className="w-full lg:w-fit"
           name="name"
           rules={[
@@ -65,7 +100,7 @@ const Page = () => {
           <Input
             type="text"
             placeholder="Full name"
-            className="w-full h-[52px] px-[16px] py-[17px] rounded-[12px] font-[400] border mt-[24px] mb-[12px] lg:w-[50vw]"
+            className="w-full h-[52px] px-[16px] py-[17px] rounded-[12px] font-[400] border mt-[24px]  lg:w-[50vw]"
           />
         </FormItem>
         <FormItem
@@ -86,7 +121,7 @@ const Page = () => {
           <Input
             type="text"
             placeholder="Username"
-            className="w-full h-[52px] px-[16px] py-[17px] rounded-[12px] font-[400] border mb-[12px] lg:w-[50vw]"
+            className="w-full h-[52px] px-[16px] py-[17px] rounded-[12px] font-[400] border  lg:w-[50vw]"
           />
         </FormItem>
         <FormItem
@@ -98,8 +133,12 @@ const Page = () => {
               message: "Please input your phone number!",
             },
             {
-              pattern: /^(08|09|07)\d{9}$/,
+              pattern: /^(080|090|070|081|091)\d{8}$/,
               message: "Please enter a valid phone number!",
+            },
+            {
+              max: 11,
+              message: "Phone number input currently accepts only 11 digits",
             },
           ]}
         >
@@ -107,7 +146,7 @@ const Page = () => {
             type="text"
       
             placeholder="Phone number"
-            className="w-full h-[52px] px-[16px] py-[17px] rounded-[12px] font-[400] border mb-[12px] lg:w-[50vw]"
+            className="w-full h-[52px] px-[16px] py-[17px] rounded-[12px] font-[400] border  lg:w-[50vw]"
           />
         </FormItem>
         <FormItem
@@ -127,10 +166,11 @@ const Page = () => {
           <Input
             type="text"
             placeholder="Email"
-            className="w-full h-[52px] px-[16px] py-[17px] rounded-[12px] font-[400] border mb-[12px] lg:w-[50vw]"
+            className="w-full h-[52px] px-[16px] py-[17px] rounded-[12px] font-[400] border  lg:w-[50vw]"
           />
         </FormItem>
 
+</div>
         <div className="flex flex-col w-full gap-y-[44px] items-center lg:gap-y-[500px] xl:gap-y-[44px] ">
           <FormItem className="w-full lg:w-fit">
             <Button
