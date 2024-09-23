@@ -5,7 +5,7 @@ import FormItem from "antd/es/form/FormItem";
 
 interface FloatLabelInputProps {
   label?: string;
-  placeholder?: string;
+  placeholder: string;
   className?: string;
   required?: boolean;
   requiredMessage:string
@@ -42,9 +42,6 @@ const FloatLabelAutoCompleteCollection = ({
 
 
 
-
-
-
   interface Option {
     value: string;
   }
@@ -67,7 +64,7 @@ const FloatLabelAutoCompleteCollection = ({
     if (!selectedItems.includes(value)) {
       setSelectedItems([...selectedItems, value]);
       setInputValue("");
-      setOptions([]); // Clear options after selection
+      setOptions([]); 
     }
   };
   
@@ -158,8 +155,8 @@ const FloatLabelAutoCompleteCollection = ({
                  onChange={(value) => setInputValue(value)} // `value` is of type string
                >
                  <Input
-                  placeholder={placeholder}
-                
+                  placeholder={isActive ? placeholder : ""}
+           
                    onChange={(e) => handleTextChange(e.target.value)}
                    style={{
                      all: "unset",

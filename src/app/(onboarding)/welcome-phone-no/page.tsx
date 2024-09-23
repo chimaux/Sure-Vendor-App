@@ -70,7 +70,7 @@ const Page = () => {
               // htmlType=""
               // key=""
               type="primary"
-              className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px]"
+              className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px]  md:h-[50px] lg:h-[60px]"
               htmlType='submit'
               style={{
                 backgroundColor: clicked ? "rgb(138 34 111 / 68%)" : "#8a226f",

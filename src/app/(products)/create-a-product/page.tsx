@@ -1,16 +1,38 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Product_layout from "../Product_layout";
 import Image from "next/image";
-import { Divider, Form,  Button } from "antd";
+import { Divider, Form,  Button, Spin } from "antd";
 
 import "@coreui/coreui/dist/css/coreui.min.css";
 import FloatLabelInput from "@/components/FloatLabelinput";
 import FloatLabelTextArea from "@/components/FloatLabelTextArea";
 import FloatLabelAutoCompleteCollection from "@/components/FloatLabelAutoCompleteCollection";
 import FloatLabelShortInput from "@/components/FloatLabelShortInput";
+import FormItem from "antd/es/form/FormItem";
+import Bottom_bar from "@/components/Bottom_bar";
+import { useRouter } from "next/navigation";
+
+
+
+
 
 const Page = () => {
+
+
+
+  const router = useRouter();
+  const [clicked, setClicked] = useState<boolean>(false);
+
+  const handleClick = (): void => {
+    setClicked((prev) => !prev);
+ 
+      router.push("/product-preview");
+ 
+  };
+
+
+
   const productCollectionItems: string[] = [
     "Apple",
     "Banana",
@@ -62,9 +84,9 @@ const Page = () => {
 
       <div className="px-[1.25rem]">
         <Form
-          onFinish={(values) => console.log(values)}
+          onFinish={handleClick}
           className="w-full flex flex-col items-center justify-between bg-[#fff] flex-grow "
-          // onFinish={handleClick}
+          
         >
           <div className="w-full lg:w-fit">
             <div className="mt-[20px]">
@@ -119,7 +141,7 @@ const Page = () => {
               allItems={productCollectionItems}
               theName="productCollection"
               label="Product collect"
-              placeholder=""
+              placeholder="Search or create collection"
             />
 
             <div>
@@ -134,7 +156,26 @@ const Page = () => {
               />
             </div>
           </div>
-          <Button htmlType="submit">click</Button>
+          <div className="flex flex-col w-full gap-y-[44px] items-center lg:gap-y-[500px] xl:gap-y-[44px] ">
+          <FormItem className="w-full lg:w-fit">
+            <Button
+              // htmlType=""
+              // key=""
+              type="primary"
+              className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px]  md:h-[50px] lg:h-[60px]"
+              htmlType='submit'
+              style={{
+                backgroundColor: clicked ? "rgb(138 34 111 / 68%)" : "#8a226f",
+              }}
+              disabled={clicked && true}
+            >
+              {clicked && <Spin size="small" />}
+              Continue
+            </Button>
+          </FormItem>
+
+          <Bottom_bar />
+        </div>
         </Form>
       </div>
     </div>
