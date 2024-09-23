@@ -10,8 +10,9 @@ const isLoggedIn: boolean = true;
 // MIDDLEWARE CHECK TO VERIFY USER AUTHENTICATION BEFORE ACCESSING THE VIEW PRODUCT PAGE
 
 export function middleware(request: Request){
-    if(!isLoggedIn && request.url === 'http://localhost:3000/product-preview'){
+    if(!isLoggedIn && request.url === 'http://localhost:3000/product-preview' || !isLoggedIn && request.url === 'https://sure-vendor-app.vercel.app/product-preview'){
   return NextResponse.redirect(new URL("/", request.url))
     }
     return NextResponse.next()
 }
+

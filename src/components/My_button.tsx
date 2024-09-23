@@ -13,9 +13,9 @@ const My_button = ({ text, page_route }: button_type) => {
 
   const handleClick = (): void => {
     setClicked((prev) => !prev);
-    setTimeout(() => {
+  
       router.push(page_route);
-    }, 2000);
+   
   };
 
   return (
@@ -26,7 +26,7 @@ const My_button = ({ text, page_route }: button_type) => {
       // htmlType=""
       // key=""
       type="primary"
-      className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px]"
+      className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px] md:h-[50px] lg:h-[60px]"
       onClick={handleClick}
       style={{
         backgroundColor: clicked ? "rgb(138 34 111 / 68%)" : "#8a226f",

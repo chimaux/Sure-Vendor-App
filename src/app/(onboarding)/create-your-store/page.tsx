@@ -33,7 +33,7 @@ const Page = () => {
   };
 
   return (
-    <div className="h-screen bg-[#fff] p-5 flex flex-col min-h-0">
+    <div className="h-screen bg-[#fff] p-[1.25rem] flex flex-col min-h-0">
       <Onboarding_layout
         top_text="Complete profile setup"
         sub_text="Connect your socials for quick setup"
@@ -53,6 +53,7 @@ const Page = () => {
             <Upload action="/upload" listType="picture"
     //  className="bg-slate-100 rounded-sm p-2"
             >
+           
               <Image
                 src="/deafultAvatar.png"
                 alt="avatar"
@@ -192,7 +193,7 @@ const Page = () => {
               // htmlType=""
               // key=""
               type="primary"
-              className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px]"
+              className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px] md:h-[50px] lg:h-[60px]"
               htmlType="submit"
               style={{
                 backgroundColor: clicked ? "rgb(138 34 111 / 68%)" : "#8a226f",

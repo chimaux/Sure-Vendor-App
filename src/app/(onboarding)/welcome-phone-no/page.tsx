@@ -31,7 +31,7 @@ const Page = () => {
   };
 
   return (
-    <div className="h-screen bg-[#fff] p-5 flex flex-col min-h-0">
+    <div className="h-screen bg-[#fff] p-[1.25rem] flex flex-col min-h-0">
     <Onboarding_layout
       top_text="Enter your phone number or email to get started"
       sub_text=" We will send you a verification code for confirmation"
@@ -53,10 +53,7 @@ const Page = () => {
               message: "Please enter a valid phone number or email!",
             },
          
-            {
-              max: 11,
-              message: "Phone number input currently accepts only 11 digits",
-            },
+    
           ]}
         >
           <Input
@@ -73,7 +70,7 @@ const Page = () => {
               // htmlType=""
               // key=""
               type="primary"
-              className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px]"
+              className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px]  md:h-[50px] lg:h-[60px]"
               htmlType='submit'
               style={{
                 backgroundColor: clicked ? "rgb(138 34 111 / 68%)" : "#8a226f",

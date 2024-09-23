@@ -18,7 +18,7 @@ import Image from "next/image";
 
 
 
-// SSG IMPLEMENTED
+// SSG IMPLEMENTED ON NEXT 14
 
 async function fetch_what_we_do_list() {
   // const listResponse = await fetch(apiUrl, {
@@ -57,7 +57,7 @@ export default async function Home() {
 
   return (
 
-    <div className="h-screen bg-[#fff] px-5 flex flex-col justify-between">
+    <div className="h-screen bg-[#fff] px-[1.25rem] flex flex-col justify-between">
       <div className="flex flex-col mt-[48px] items-center lg:flex-row justify-center lg:gap-x-[50px] lg:mt-[100px]">
         <div className="w-[296px] h-[210px] relative lg:w-[496px] lg:h-[340px]">
           <Image
@@ -77,7 +77,7 @@ export default async function Home() {
               The safest platfrom to shop from social media vendors
             </p>
           </div>
-          <div className="bg-[#ffeafa] border-[#8a226f] border-[0.5px] w-full h-[140px] rounded-[12px] p-[10px]">
+          <div className="bg-[#ffeafa] border-[#8a226f] border-[0.5px] w-full h-fit rounded-[12px] px-[10px] pt-[12px]">
             {the_list.record.what_we_do_list.map((item: what_we_do_list_type, index: number) => (
               <div
                 className="flex gap-x-[8px] items-center mb-[12px]"
