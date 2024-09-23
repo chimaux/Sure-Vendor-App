@@ -18,7 +18,7 @@ import Image from "next/image";
 
 
 
-// SSG IMPLEMENTED
+// SSG IMPLEMENTED ON NEXT 14
 
 async function fetch_what_we_do_list() {
   // const listResponse = await fetch(apiUrl, {
