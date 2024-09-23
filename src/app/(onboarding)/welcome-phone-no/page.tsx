@@ -31,7 +31,7 @@ const Page = () => {
   };
 
   return (
-    <div className="h-screen bg-[#fff] p-5 flex flex-col min-h-0">
+    <div className="h-screen bg-[#fff] p-[1.25rem] flex flex-col min-h-0">
     <Onboarding_layout
       top_text="Enter your phone number or email to get started"
       sub_text=" We will send you a verification code for confirmation"
