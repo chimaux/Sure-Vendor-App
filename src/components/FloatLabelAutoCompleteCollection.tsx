@@ -156,7 +156,7 @@ const FloatLabelAutoCompleteCollection = ({
                >
                  <Input
                   placeholder={isActive ? placeholder : ""}
-           
+           autoComplete="off"
                    onChange={(e) => handleTextChange(e.target.value)}
                    style={{
                      all: "unset",
