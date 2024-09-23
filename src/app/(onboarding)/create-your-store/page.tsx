@@ -33,7 +33,7 @@ const Page = () => {
   };
 
   return (
-    <div className="h-screen bg-[#fff] p-5 flex flex-col min-h-0">
+    <div className="h-screen bg-[#fff] p-[1.25rem] flex flex-col min-h-0">
       <Onboarding_layout
         top_text="Complete profile setup"
         sub_text="Connect your socials for quick setup"
