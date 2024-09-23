@@ -53,10 +53,7 @@ const Page = () => {
               message: "Please enter a valid phone number or email!",
             },
          
-            {
-              max: 11,
-              message: "Phone number input currently accepts only 11 digits",
-            },
+    
           ]}
         >
           <Input
