@@ -22,10 +22,10 @@ const Page = () => {
 
   return (
     <div className="h-screen bg-[#fff] flex flex-col min-h-0">
-      <div className="px-5 pt-5">
+      <div className="px-[1.25rem] pt-[1.25rem]">
         <Product_layout />
       </div>
-      <div className="flex justify-between items-center mt-[20px] px-5 ">
+      <div className="flex justify-between items-center mt-[20px] px-[1.25rem] ">
         <div
           className="flex justify-center gap-x-[5px] items-center py-[2px] w-[65px] h-[22px] rounded-full border-[0.5px]"
           style={{
@@ -52,7 +52,7 @@ const Page = () => {
           marginTop: 10,
         }}
       />
-      <div className="px-5 ">
+      <div className="px-[1.25rem]">
         <div className="flex justify-between items-center my-[10px]">
           <div className="font-[700]">Basic details</div>
 
@@ -60,7 +60,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="px-5">
+      <div className="px-[1.25rem]">
         <Form
           onFinish={(values) => console.log(values)}
           className="w-full flex flex-col items-center justify-between bg-[#fff] flex-grow "
