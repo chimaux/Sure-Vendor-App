@@ -111,13 +111,14 @@ const FloatLabelAutoCompleteCollection = ({
         ]}
       >
         <div className="w-full px-[16px] py-[17px] rounded-[12px] font-[400]  border-[0.5px] h-fit lg:w-[50vw] ">
-          <div>
+          <div className="w-full flex flex-wrap">
             {selectedItems.map((item) => (
               <Tag
                 key={item}
                 closable
                 onClose={() => handleDelete(item)}
-                style={{ margin: "4px" }}
+                className="rounded-full px-[10px] w-fit flex gap-x-[20px] text-[12px] mt-[10px]"
+        
               >
                 {item}
               </Tag>

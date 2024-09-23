@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Product_layout from "../Product_layout";
 import Image from "next/image";
-import { Divider, Form,  Button, Spin } from "antd";
+import { Divider, Form, Button, Spin, Switch } from "antd";
 
 import "@coreui/coreui/dist/css/coreui.min.css";
 import FloatLabelInput from "@/components/FloatLabelinput";
@@ -13,25 +13,57 @@ import FormItem from "antd/es/form/FormItem";
 import Bottom_bar from "@/components/Bottom_bar";
 import { useRouter } from "next/navigation";
 
-
-
-
-
 const Page = () => {
+
+
+const productImages = [
+  {
+  image:"/picture1.png",
+  name:"picture1.png"
+},
+  {
+  image:"/picture1.png",
+  name:"picture1.png"
+},
+  {
+  image:"/picture1.png",
+  name:"picture1.png"
+},
+  {
+  image:"/picture1.png",
+  name:"picture1.png"
+},
+  {
+  image:"/picture1.png",
+  name:"picture1.png"
+},
+]
 
 
 
   const router = useRouter();
+  const [checked, setChecked] = useState<boolean[]>(Array(productImages.length).fill(false));
+
+
+
+
+  const handleSwitchChange = (index: number, value: boolean) => {
+    const updatedChecked = [...checked];
+    updatedChecked[index] = value; // Update the specific index
+    setChecked(updatedChecked);
+  };
+
+
+
+
+
   const [clicked, setClicked] = useState<boolean>(false);
 
   const handleClick = (): void => {
     setClicked((prev) => !prev);
- 
-      router.push("/product-preview");
- 
+
+    router.push("/product-preview");
   };
-
-
 
   const productCollectionItems: string[] = [
     "Apple",
@@ -49,7 +81,7 @@ const Page = () => {
       </div>
       <div className="flex justify-between items-center mt-[20px] px-[1.25rem] ">
         <div
-          className="flex justify-center gap-x-[5px] items-center py-[2px] w-[65px] h-[22px] rounded-full border-[0.5px]"
+          className="flex justify-center gap-x-[5px] items-center py-[2px] w-[65px] h-[22px] rounded-full border-[0.5px] cursor-pointer"
           style={{
             borderColor: "rgb(0 0 0 / 20%)",
           }}
@@ -65,7 +97,7 @@ const Page = () => {
           <Image src="/tick.svg" alt="tick icon" width={15} height={13} />
         </div>
 
-        <div className="text-[12px] text-[#8A226F] font-[500]">
+        <div className="text-[12px] text-[#8A226F] font-[500] cursor-pointer">
           Preview product
         </div>
       </div>
@@ -74,11 +106,13 @@ const Page = () => {
           marginTop: 10,
         }}
       />
-      <div className="px-[1.25rem]">
-        <div className="flex justify-between items-center my-[10px]">
+      <div className="w-full px-[1.25rem]">
+        <div className="w-full flex justify-between items-center my-[10px]">
           <div className="font-[700]">Basic details</div>
+          <div className="h-[20px] w-[20px] cursor-pointer flex items-center justify-center ">
 
-          <Image src="/down_arrow.svg" alt="tick icon" width={15} height={20} />
+          <Image src="/down_arrow.svg" alt="tick icon" width={15} height={20} className="cursor-pointer"/>
+        </div>
         </div>
       </div>
 
@@ -86,7 +120,6 @@ const Page = () => {
         <Form
           onFinish={handleClick}
           className="w-full flex flex-col items-center justify-between bg-[#fff] flex-grow "
-          
         >
           <div className="w-full lg:w-fit">
             <div className="mt-[20px]">
@@ -156,26 +189,105 @@ const Page = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col w-full gap-y-[44px] items-center lg:gap-y-[500px] xl:gap-y-[44px] ">
-          <FormItem className="w-full lg:w-fit">
-            <Button
-              // htmlType=""
-              // key=""
-              type="primary"
-              className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px]  md:h-[50px] lg:h-[60px]"
-              htmlType='submit'
-              style={{
-                backgroundColor: clicked ? "rgb(138 34 111 / 68%)" : "#8a226f",
-              }}
-              disabled={clicked && true}
-            >
-              {clicked && <Spin size="small" />}
-              Continue
-            </Button>
-          </FormItem>
 
-          <Bottom_bar />
-        </div>
+  
+
+          <div className="w-full lg:w-[50vw] my-[20px]">
+            <div className="w-full flex justify-between items-center my-[10px]">
+              <div className="font-[700]">Product images</div>
+
+              <div className="h-[20px] w-[20px] cursor-pointer flex items-center justify-center ">
+
+    <Image
+                src="/down_arrow.svg"
+                alt="tick icon"
+                width={15}
+                height={20}
+                
+              />
+    </div>
+            </div>
+          </div>
+
+          <div className="w-full ">
+<div className="w-full flex flex-col items-center justify-center ">
+
+{
+
+productImages.map((items,index)=>(
+<div 
+key={index.toString()}
+className="w-full flex items-center justify-between mb-[12px] lg:w-[50vw] lg:mb-[20px]">
+
+<div className="flex gap-x-[5px] items-center ">
+<div className="rounded-md w-[60px] h-[60px]">
+  <Image
+  src={items.image}
+  alt="image"
+  width={60}
+  height={60}
+  />
+</div>
+<div>{items.name}</div>
+</div>
+
+<div className="flex gap-x-[5px] items-center">
+<div className="h-[20px] w-[20px] cursor-pointer flex items-center justify-center ">
+
+  <Image
+  src="/more_horiz.svg"
+  alt="image"
+  width={12}
+  height={3}
+  />
+
+</div>
+<Switch 
+
+checked={checked[index]} 
+onChange={(value) => handleSwitchChange(index, value)} 
+
+style={{
+  backgroundColor: checked[index] ? "#8A226F" : "",
+}}
+
+/>
+</div>
+
+</div>
+))
+
+}
+
+
+
+
+</div>
+
+          </div>
+
+          <div className="flex flex-col w-full gap-y-[44px] items-center lg:gap-y-[500px] xl:gap-y-[44px] ">
+            <FormItem className="w-full lg:w-fit">
+              <Button
+                // htmlType=""
+                // key=""
+                type="primary"
+                className="w-full h-[40px] text-white font-500 bg-[#8a226f] rounded-full mt-[10px] lg:mt-[unset] lg:w-[50vw] lg:text-[18px]  md:h-[50px] lg:h-[60px]"
+                htmlType="submit"
+                style={{
+                  backgroundColor: clicked
+                    ? "rgb(138 34 111 / 68%)"
+                    : "#8a226f",
+                }}
+                disabled={clicked && true}
+              >
+                {clicked && <Spin size="small" />}
+                Continue
+              </Button>
+            </FormItem>
+
+            <Bottom_bar />
+          </div>
         </Form>
       </div>
     </div>

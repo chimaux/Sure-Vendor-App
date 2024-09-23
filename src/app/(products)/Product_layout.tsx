@@ -8,7 +8,8 @@ const Product_layout = () => {
     <div className="flex justify-between items-center">
       <Get_started_back text="Create a product" />
 
-      <div className="cursor-pointer">
+      <div className="h-[20px] w-[20px] cursor-pointer flex items-center justify-center ">
+
         <Image src="/more_vert.svg" alt="more icon" width={3} height={12} />
       </div>
     </div>

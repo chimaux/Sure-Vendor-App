@@ -53,6 +53,7 @@ const Page = () => {
             <Upload action="/upload" listType="picture"
     //  className="bg-slate-100 rounded-sm p-2"
             >
+           
               <Image
                 src="/deafultAvatar.png"
                 alt="avatar"
