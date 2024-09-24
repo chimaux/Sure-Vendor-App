@@ -15,21 +15,19 @@ const NetworkStatus = () => {
     const [close, setClose] = useState<boolean>(false);
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
-      // Update network status
+ 
       const handleStatusChange = () => {
         setIsOnline(navigator.onLine);
                 setClose(false)
      
       };
   
-      // Listen to the online status
+ 
       window.addEventListener('online', handleStatusChange);
   
-      // Listen to the offline status
+    
       window.addEventListener('offline', handleStatusChange);
-  
-// AUTOMATICALY CLOSE THE TOAST MESSAGE IF USER IS ONLINE
+
       setTimeout(() => {
         
         if (isOnline) {
@@ -41,7 +39,7 @@ const NetworkStatus = () => {
         window.removeEventListener('online', handleStatusChange);
         window.removeEventListener('offline', handleStatusChange);
       };
-    }
+   
     }, [isOnline]);
 
 
