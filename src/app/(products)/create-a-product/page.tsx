@@ -12,7 +12,6 @@ import {
   ConfigProvider,
 } from "antd";
 
-import "@coreui/coreui/dist/css/coreui.min.css";
 import FloatLabelInput from "@/components/FloatLabelinput";
 import FloatLabelTextArea from "@/components/FloatLabelTextArea";
 import FloatLabelAutoCompleteCollection from "@/components/FloatLabelAutoCompleteCollection";
