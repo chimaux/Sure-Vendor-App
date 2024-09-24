@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
+import React from "react";
+import dynamic from "next/dynamic";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,8 +20,22 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   manifest:"/manifest.json",
   title: "Sure Vendor App",
-  description: "Wprld most effecient customer to vendor digital solution",
+  description: "W0rld most effecient customer to vendor digital solution",
 };
+
+
+
+
+const NetworkStatus = dynamic(
+  () => import("@/components/NetworkStatus"),
+  {
+    ssr: false,
+  }
+)
+
+
+
+
 
 export default function RootLayout({
   children,
@@ -46,6 +63,10 @@ export default function RootLayout({
           shadow="0 0 10px #2299DD,0 0 5px #2299DD"
          
          />
+     
+         <NetworkStatus />
+     
+       
         {children}
       </body>
     </html>
