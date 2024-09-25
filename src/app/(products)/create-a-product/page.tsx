@@ -140,9 +140,9 @@ const Page = () => {
       </div>
 
 
-        {
-dropDown1 &&(
-  <div className="w-full lg:w-fit px-[1.25rem]">
+        
+ 
+  <div className={`w-full lg:w-fit px-[1.25rem] ${!dropDown1 ? "h-[0px] overflow-hidden":"" }`}>
   <div className="mt-[20px]">
     <FloatLabelInput
       label="Product title"
@@ -210,10 +210,9 @@ dropDown1 &&(
     />
   </div>
 </div>
-)
 
-        }
- 
+
+   
 
         <div className={`w-full  ${dropDown2 === true ? "mb-[20px]" : ""} px-[1.25rem]  lg:w-[50vw]`}>
           <div className="w-full flex justify-between items-center">
@@ -234,7 +233,7 @@ dropDown1 &&(
 {
 
 dropDown2 && (
-  <div className="w-full px-[1.25rem]">
+  <div className="w-full px-[1.25rem]  ">
   <div className="w-full flex flex-col items-center justify-center ">
     {productImages.map((items, index) => (
       <div
@@ -318,9 +317,8 @@ dropDown2 && (
               </div>
             </div>
           </div>
-{
-  dropDown3 && (<>
-    <div className="w-[90%] h-[40px] rounded-full flex items-center gap-x-[10px] px-[1.25rem] ml-[10px] mb-[20px]">
+<div className={`${!dropDown3 ? "h-[0px] overflow-hidden":"" }`}>
+    <div className="w-[90%] h-[40px] rounded-full flex items-center gap-x-[10px] px-[1.25rem] ml-[10px] mb-[20px] ">
             <ConfigProvider
               theme={{
                 token: {
@@ -360,11 +358,9 @@ dropDown2 && (
             placeholder="Enter values"
 />
 </div>
-</>
+</div>
 
-)
-}
-  
+
 
 
 
