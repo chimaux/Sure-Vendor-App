@@ -380,7 +380,7 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="w-full mb-[12px] justify-center px-[1.25rem] lg:px-[unset] lg:px-[unset]">
+              <div className="w-full mb-[12px] justify-center px-[1.25rem]  lg:px-[unset]">
                 <InventoryVariationCollectionComponent
                   requiredMessage="Please enter collections"
                   allItems={productCollectionItems}
