@@ -537,12 +537,19 @@ const Page = () => {
                     <div>
                       <div className="text-[16px] font-[400]">{items.name}</div>
                       <div
-                        className="flex text-[12px]"
+                        className="flex items-center text-[12px]"
                         style={{
                           color: "rgb(0 0 0 / 60%)",
                         }}
                       >
-                        <div>₦{items.price}</div>&nbsp;.&nbsp;
+                        <div>₦{items.price}</div>
+                        <Image
+                          src="/dot.svg"
+                          className="mx-[20px]"
+                          alt="image"
+                          width={5}
+                          height={5}
+                        />
                         <div>X{items.unit}</div>
                       </div>
                     </div>
@@ -652,10 +659,10 @@ const Page = () => {
           </div>
 
           <div className="w-full lg:flex lg:justify-center ">
-<div className="w-full lg:w-[50vw]">
-        <Divider className="mb-[20px] mt-0" />
-        </div>
-</div>
+            <div className="w-full lg:w-[50vw]">
+              <Divider className="mb-[20px] mt-0" />
+            </div>
+          </div>
         </div>
 
         <div className="w-full flex flex-col gap-y-[44px] items-center lg:gap-y-[500px] xl:gap-y-[44px] px-[1.25rem] lg:px-[unset]">
