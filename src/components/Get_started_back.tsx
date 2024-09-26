@@ -20,7 +20,7 @@ const Get_started_back = ({text='Get Started'}:text_type) => {
         width={11.67}
         height={11.67}
       />
-      <div className="font-500 text-[16px]">
+      <div className="font-500 text-[16px] lg:text-[18px]">
         {text}
 
         </div>

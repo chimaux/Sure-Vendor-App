@@ -27,7 +27,7 @@ const Onboarding_layout = ({ top_text, sub_text }: LayoutProps) => {
 
 <div className="w-[70%] lg:w-full">
 <p 
-className="lg:text-center"
+className="lg:text-center lg:text-[18px]"
 style={{
   color:"rgb(0 0 0 / 60%)"
 }}>
