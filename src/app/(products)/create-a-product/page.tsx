@@ -457,7 +457,13 @@ const Page = () => {
                         color: "rgb(0 0 0 / 60%)",
                       }}
                     >
-                      <div>₦40</div>&nbsp;.&nbsp;<div>X120</div>
+                      <div>₦40</div>                        <Image
+                          src="/dot.svg"
+                          className="mx-[20px]"
+                          alt="image"
+                          width={5}
+                          height={5}
+                        /><div>X120</div>
                     </div>
                   </div>
                 </div>
@@ -688,7 +694,7 @@ const Page = () => {
                 // htmlType=""
                 // key=""
                 type="primary"
-                className="w-full h-[40px] text-white font-500  bg-[#8a226f] rounded-full  lg:mt-[unset]  lg:text-[18px]  md:h-[50px] lg:h-[60px] lg:w-[24.5vw]"
+                className="w-full h-[40px] text-white font-500  bg-[#8a226f] rounded-full  lg:mt-[unset]  lg:text-[18px]  md:h-[50px] lg:h-[60px] lg:w-[24.5vw] shadow-[0px_4px_10px_rgba(138,34,111,0.3)"
                 htmlType="submit"
                 style={{
                   backgroundColor: clicked
