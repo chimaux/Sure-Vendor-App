@@ -15,16 +15,16 @@ if (!self.define) {
         return e;
       })
   );
-  self.define = (n, i) => {
-    const c =
+  self.define = (n, c) => {
+    const i =
       e ||
       ("document" in self ? document.currentScript.src : "") ||
       location.href;
-    if (s[c]) return;
+    if (s[i]) return;
     let t = {};
-    const r = (e) => a(e, c),
-      o = { module: { uri: c }, exports: t, require: r };
-    s[c] = Promise.all(n.map((e) => o[e] || r(e))).then((e) => (i(...e), t));
+    const r = (e) => a(e, i),
+      o = { module: { uri: i }, exports: t, require: r };
+    s[i] = Promise.all(n.map((e) => o[e] || r(e))).then((e) => (c(...e), t));
   };
 }
 define(["./workbox-c2c0676f"], function (e) {
@@ -35,100 +35,96 @@ define(["./workbox-c2c0676f"], function (e) {
     e.precacheAndRoute(
       [
         {
-          url: "/_next/static/WeND_uz6N3kR8s-YAMEpk/_buildManifest.js",
-          revision: "2ec694eb52ae4f523f265a46bae4d768",
-        },
-        {
-          url: "/_next/static/WeND_uz6N3kR8s-YAMEpk/_ssgManifest.js",
-          revision: "b6652df95db52feb4daf4eca35380933",
-        },
-        {
           url: "/_next/static/chunks/173-9360a84cac0a0818.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
+        },
+        {
+          url: "/_next/static/chunks/196-cc9332dfda66834d.js",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/213-63f6d04841a33451.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/231-535793c4ab2c7aa7.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/403-189a06c843205ee1.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
-        },
-        {
-          url: "/_next/static/chunks/503-ebb66c3a24b31f8f.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/590-678a09bba63ca08b.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
+        },
+        {
+          url: "/_next/static/chunks/765-c8a234ef84ecd5c6.js",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/962-00aeea85624173bf.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
-          url: "/_next/static/chunks/app/(onboarding)/create-your-store/page-f7ab4b8b5b1615fb.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          url: "/_next/static/chunks/app/(onboarding)/create-your-store/page-67c17477af18b83a.js",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
-          url: "/_next/static/chunks/app/(onboarding)/enter-basic-info/page-066e337bec1759a0.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          url: "/_next/static/chunks/app/(onboarding)/enter-basic-info/page-97b75b5c58a64705.js",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
-          url: "/_next/static/chunks/app/(onboarding)/welcome-phone-no/page-3ec0b1da525d6e51.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          url: "/_next/static/chunks/app/(onboarding)/welcome-phone-no/page-c9c4dd39347d8a81.js",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
-          url: "/_next/static/chunks/app/(products)/create-a-product/page-753f7850aba3dc36.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          url: "/_next/static/chunks/app/(products)/create-a-product/page-7fb22ba88c5c8e67.js",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
-          url: "/_next/static/chunks/app/(products)/product-preview/page-84b9dcab837de69c.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          url: "/_next/static/chunks/app/(products)/product-preview/page-fe6c7662932a675a.js",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/app/_not-found/page-46a1037b3bb5f049.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/app/layout-ae6db099ec05b7b3.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/app/not-found-bcdd838bb47d9c58.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
-          url: "/_next/static/chunks/app/page-fa761540005f884c.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          url: "/_next/static/chunks/app/page-30978d17b968e3a9.js",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/fd9d1056-35534068ac75990a.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/framework-f66176bb897dc684.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/main-app-b86dd719a5edaeac.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/main-de0a46ac88d9adc5.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/pages/_app-6a626577ffa902a4.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/pages/_error-1be831200e60c5c0.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
           url: "/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js",
@@ -136,11 +132,11 @@ define(["./workbox-c2c0676f"], function (e) {
         },
         {
           url: "/_next/static/chunks/webpack-c96f2ceddf9ef63f.js",
-          revision: "WeND_uz6N3kR8s-YAMEpk",
+          revision: "xBES8H7yAXn3WJUpt3cbg",
         },
         {
-          url: "/_next/static/css/c971f42a09c11ffb.css",
-          revision: "c971f42a09c11ffb",
+          url: "/_next/static/css/5a765b047a503780.css",
+          revision: "5a765b047a503780",
         },
         {
           url: "/_next/static/media/4473ecc91f70f139-s.p.woff",
@@ -149,6 +145,14 @@ define(["./workbox-c2c0676f"], function (e) {
         {
           url: "/_next/static/media/463dafcda517f24f-s.p.woff",
           revision: "cbeb6d2d96eaa268b4b5beb0b46d9632",
+        },
+        {
+          url: "/_next/static/xBES8H7yAXn3WJUpt3cbg/_buildManifest.js",
+          revision: "2ec694eb52ae4f523f265a46bae4d768",
+        },
+        {
+          url: "/_next/static/xBES8H7yAXn3WJUpt3cbg/_ssgManifest.js",
+          revision: "b6652df95db52feb4daf4eca35380933",
         },
         {
           url: "/arrow_left.svg",
@@ -163,6 +167,7 @@ define(["./workbox-c2c0676f"], function (e) {
           url: "/deafultAvatar.png",
           revision: "1b49f88bff0f6de4a1618b360bbbe113",
         },
+        { url: "/dot.svg", revision: "65c43bca1a0ac46c5c51ab5d9d6a2a1a" },
         {
           url: "/down_arrow.svg",
           revision: "e23f9468ee71e4e0929daba60b957831",
@@ -170,6 +175,7 @@ define(["./workbox-c2c0676f"], function (e) {
         { url: "/img-192.png", revision: "c810460b6a9561315050fb0d795a6a54" },
         { url: "/img-384.png", revision: "5efc2dd17cf2e7cdcaec682ceec9ae15" },
         { url: "/img-512.png", revision: "6242577ba94f6dda0a3032fd37ea5456" },
+        { url: "/like.svg", revision: "189b1273216dd04aae0b71549c10c921" },
         { url: "/manifest.json", revision: "02cdda336b5dd61caa00826c8869181d" },
         {
           url: "/more_horiz.svg",
@@ -177,10 +183,23 @@ define(["./workbox-c2c0676f"], function (e) {
         },
         { url: "/more_vert.svg", revision: "b02a38544828697487a51b171ff81113" },
         { url: "/picture1.png", revision: "c410329bd67fea77ea42c8cbafafb6ea" },
+        { url: "/plus.svg", revision: "46ea2798c7a67610166064a7bc9b377d" },
+        {
+          url: "/productImg.png",
+          revision: "361bd66f5be609f6cedd8abb3f0f73f4",
+        },
+        {
+          url: "/productImg2.png",
+          revision: "82762b12d8883764b4db17fe7e7fb87d",
+        },
+        { url: "/share.svg", revision: "dd328125351da7f2f58c2464336a82a9" },
         { url: "/snap.svg", revision: "989d3af49ac817fb888520b7cd9683d3" },
         { url: "/social1.svg", revision: "5a4a3204d8e83426cb30d8429ea18398" },
         { url: "/social2.svg", revision: "bf07e5ba82161b380fd5cab6c68445a2" },
         { url: "/social3.svg", revision: "f43b13ef6ef5e26c041008b3b0efb9a3" },
+        { url: "/star.svg", revision: "56af7dce62804780e76442045411ae7b" },
+        { url: "/star2.svg", revision: "2cf3e3c8f1768af06f54758900459e0d" },
+        { url: "/thubnail.svg", revision: "085c35028a61c25a85c428926c40c763" },
         { url: "/tick.svg", revision: "a6bc5a798a3daf56a6391e47aafecff0" },
         {
           url: "/welcome_img.svg",
